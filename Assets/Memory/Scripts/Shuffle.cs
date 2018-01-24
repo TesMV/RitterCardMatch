@@ -55,7 +55,7 @@ public class Shuffle : MonoBehaviour {
 		int cardsincolumn = cardslist.Count/cardsinrow;
 		if(cardslist.Count % cardsinrow > 0)
 			cardsincolumn += 1;
-		float spacebetweencards = .2f;
+		float spacebetweencards = 3f;
 		
 		for(int i=0; i<cardslist.Count; i++){
 			GameObject mc = Instantiate(memorycard, new Vector3((i%cardsinrow+(i%cardsinrow*spacebetweencards))-(cardsinrow/2f)+spacebetweencards, 0, (i/cardsinrow+(i/cardsinrow*spacebetweencards))-(cardsincolumn/2f)+spacebetweencards), memorycard.transform.rotation) as GameObject;
