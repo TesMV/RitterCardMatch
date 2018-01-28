@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public class Shuffle : MonoBehaviour {
 
 	public GameObject memorycard;
-	public Texture[] cards;
+    public Texture[] cards;
 	
 	private List<Card> cardslist = new List<Card>();
 	
@@ -21,7 +21,9 @@ public class Shuffle : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-		for(int i=0; i<cards.Length; i++){
+        cards = Resources.LoadAll<Texture>("RandomTextures");
+
+        for (int i=0; i<cards.Length; i++){
 			cardslist.Add(new Card(i, cards[i]));
 			cardslist.Add(new Card(i, cards[i]));
 		}
@@ -51,11 +53,11 @@ public class Shuffle : MonoBehaviour {
 	}
 	
 	void SpawnCards(){
-		int cardsinrow = 4;
+		int cardsinrow = 6;
 		int cardsincolumn = cardslist.Count/cardsinrow;
 		if(cardslist.Count % cardsinrow > 0)
 			cardsincolumn += 1;
-		float spacebetweencards = 3f;
+		float spacebetweencards = 1.3f;
 		
 		for(int i=0; i<cardslist.Count; i++){
 			GameObject mc = Instantiate(memorycard, new Vector3((i%cardsinrow+(i%cardsinrow*spacebetweencards))-(cardsinrow/2f)+spacebetweencards, 0, (i/cardsinrow+(i/cardsinrow*spacebetweencards))-(cardsincolumn/2f)+spacebetweencards), memorycard.transform.rotation) as GameObject;
