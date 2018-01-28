@@ -54,6 +54,8 @@
      <Compile Include="Assets\Memory\Scripts\ClickController.cs" />
      <Compile Include="Assets\Memory\Scripts\Logic.cs" />
      <Compile Include="Assets\Memory\Scripts\MemoryCard.cs" />
+     <Compile Include="Assets\Memory\Scripts\PlayButtonClick.cs" />
+     <Compile Include="Assets\Memory\Scripts\ScorePrint.cs" />
      <Compile Include="Assets\Memory\Scripts\Shuffle.cs" />
      <Compile Include="Assets\scripts\DestroyParticle.cs" />
      <Compile Include="Assets\scripts\LightControl.cs" />
