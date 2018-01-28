@@ -1,12 +1,13 @@
-﻿/*		credits: xtase studios - http://xtasestudios.com/scripts		*/
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class Logic : MonoBehaviour {
 
 	private MemoryCard[] cards = new MemoryCard[2];
 	private int setsofcards;
-	private int nroftries = 0;
+	private static int nroftries = 0;
 	
 	// Use this for initialization
 	void Start () {
@@ -49,8 +50,15 @@ public class Logic : MonoBehaviour {
 	}
 	void GameEnd(){
 		Debug.Log("Game has ended, number of tries: " + nroftries);
-	}
-	public void SetSetsOfCards(int i){
+        SceneManager.LoadScene(2);        
+    }
+
+    public int GetNumber()
+    {
+        return nroftries;
+    }
+
+    public void SetSetsOfCards(int i){
 		setsofcards = i;
 	}
 }
