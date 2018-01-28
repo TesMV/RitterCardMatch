@@ -18,7 +18,7 @@ public class MemoryCard : MonoBehaviour {
 	}
 	
 	public void SetMemorycard(Texture t, int number){
-		GetComponent<Renderer>().materials[1].mainTexture = t;
+		GetComponent<Renderer>().materials[3].mainTexture = t; 	//Номер материала для рандома
 		cardnumber = number;
 	}
 	
