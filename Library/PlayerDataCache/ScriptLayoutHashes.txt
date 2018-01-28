@@ -157,6 +157,9 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 c887b196f21675309ddb1bbf444a5a75 Assembly-CSharp.dll:.RandomLook
 563daf171b5d1c7c75b1108951401223 Assembly-UnityScript-firstpass.dll:.CharacterMotor
 <<<<<<< HEAD
+<<<<<<< HEAD
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.PlayButtonClick
+=======
+>>>>>>> d23f1acca1df77b14c60bf17f7d2bc41b3b32712
 =======
 >>>>>>> d23f1acca1df77b14c60bf17f7d2bc41b3b32712

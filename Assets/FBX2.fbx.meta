@@ -1,15 +1,14 @@
 fileFormatVersion: 2
-guid: b963a97d8a8006c4f9b2cd14bf076bd5
-timeCreated: 1517139481
+guid: c1f15131a4d89b64db54b15223761f5a
+timeCreated: 1517141926
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: No Name
-    2100002: "\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B.2"
-    2100004: "\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B"
+    2100000: "\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B.1"
+    2100002: "\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B"
     2300000: //RootNode
     3300000: //RootNode
     4300000: Cube
