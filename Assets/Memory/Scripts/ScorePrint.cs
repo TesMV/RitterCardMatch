@@ -8,15 +8,27 @@ public class ScorePrint : MonoBehaviour {
 
     public Text score;
 
-    private Logic getNumber;
+    private Logic getLogicInfo;
 
     private int numberOfTries;
+
+    private bool winStatus;
 	// Use this for initialization
 	void Start () {
-        getNumber = GetComponent<Logic>();
+        getLogicInfo = GetComponent<Logic>();
         score = GetComponent<Text>();
-        numberOfTries = getNumber.GetNumber();
-        score.text = "Number of tries " + numberOfTries.ToString();
+        numberOfTries = getLogicInfo.GetNumber();
+        winStatus = getLogicInfo.GetWin();
+
+        if(winStatus == true)
+        {
+            score.text = "You are a winner! Your number of tries is " + numberOfTries.ToString();
+        }
+        else
+        {
+            score.text = "Sorry, but you lose. Your number of tries is " + numberOfTries.ToString();
+        }
+        
 	}
 	
 	// Update is called once per frame

@@ -8,15 +8,33 @@ public class Logic : MonoBehaviour {
 	private MemoryCard[] cards = new MemoryCard[2];
 	private int setsofcards;
 	private static int nroftries = 0;
+    private float timeLeft = 31.0f;
+    private int timeLeftInteger;
+    private static bool win = false;
+    public Text timer;
 	
 	// Use this for initialization
 	void Start () {
-	
+        
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	
+        timeLeft -= Time.deltaTime;
+        Debug.Log((int)timeLeft);
+        timeLeftInteger = (int)timeLeft;
+        try
+        {
+            timer.GetComponent<Text>().text = "Time remaining: " + timeLeftInteger.ToString();
+        }
+        catch(System.Exception ex)
+        {
+            Debug.Log("Text is null");
+        }
+        if (timeLeft < 0.0f) //если истекло время заканчиваем игру
+        {
+            GameEnd();
+        }
 	}
 	
 	public void CheckCards(MemoryCard mc){
@@ -42,7 +60,11 @@ public class Logic : MonoBehaviour {
 		
 		setsofcards--;
 		if(setsofcards == 0)
-			GameEnd();
+        {
+            win = true; //если не осталось карт защитываем выйгрыш.
+            GameEnd();
+        }
+			
 	}
 	void CardsNotMatching(){
 		cards[0].Hide();
@@ -56,6 +78,11 @@ public class Logic : MonoBehaviour {
     public int GetNumber()
     {
         return nroftries;
+    }
+
+    public bool GetWin()
+    {
+        return win;
     }
 
     public void SetSetsOfCards(int i){
