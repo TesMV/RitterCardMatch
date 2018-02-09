@@ -1,4 +1,4 @@
-WindowsStandalone
+Android
 SceneListBegin?
 Assets/Memory/Scenes/Menu.unity
 Assets/Memory/Scenes/DifficultScreen.unity
