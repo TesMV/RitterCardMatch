@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Memory/Scenes/Menu.unity
     guid: 89882ecbbf0d4014fbbea9e1a1e9d371
   - enabled: 1
+    path: Assets/Memory/Scenes/DifficultScreen.unity
+    guid: 674eef0f61f48484eb36ea81e7c2dd76
+  - enabled: 1
     path: Assets/Memory/memorygame_c#.unity
     guid: 86d7356cdb95f6b4fbee649ea3f73181
   - enabled: 1

@@ -5,17 +5,23 @@ using System.Collections;
 
 public class Logic : MonoBehaviour {
 
+    private SelectDifficulty difficulty;
 	private MemoryCard[] cards = new MemoryCard[2];
 	private int setsofcards;
 	private static int nroftries = 0;
-    private float timeLeft = 31.0f;
+    private float timeLeft;
     private int timeLeftInteger;
     private static bool win = false;
+    public static bool gameEnd = false;
     public Text timer;
 	
 	// Use this for initialization
 	void Start () {
-        
+        if(gameEnd == false)
+        {
+            difficulty = GetComponent<SelectDifficulty>();
+            timeLeft = difficulty.ReturnDifficility();
+        }      
 	}
 	
 	// Update is called once per frame
@@ -72,7 +78,9 @@ public class Logic : MonoBehaviour {
 	}
 	void GameEnd(){
 		Debug.Log("Game has ended, number of tries: " + nroftries);
-        SceneManager.LoadScene(2);        
+        if (!gameEnd)
+            SceneManager.LoadScene(3);
+        gameEnd = true;
     }
 
     public int GetNumber()

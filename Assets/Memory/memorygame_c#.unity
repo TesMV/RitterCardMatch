@@ -424,6 +424,7 @@ GameObject:
   - component: {fileID: 1073180187}
   - component: {fileID: 1073180188}
   - component: {fileID: 1073180189}
+  - component: {fileID: 1073180185}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -488,6 +489,17 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &1073180185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1073180180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13827c12b61cb074093f5973e34ecb50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1073180186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -610,6 +622,7 @@ GameObject:
   - component: {fileID: 1257390711}
   - component: {fileID: 1257390713}
   - component: {fileID: 1257390712}
+  - component: {fileID: 1257390714}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
@@ -1535,6 +1548,20 @@ MeshCollider:
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!64 &1257390713
+MeshCollider:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1257390667}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!64 &1257390714
 MeshCollider:
   m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}

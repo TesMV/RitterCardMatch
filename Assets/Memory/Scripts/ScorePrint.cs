@@ -42,7 +42,7 @@ public class ScorePrint : MonoBehaviour {
     }
 
     public void Restart()
-    {
-        SceneManager.LoadScene(1);
+    {       
+        SceneManager.LoadScene(1);       
     }
 }

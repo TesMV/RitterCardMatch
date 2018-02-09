@@ -7,6 +7,7 @@ public class PlayButtonClick : MonoBehaviour {
 
     public void PlayGame()
     {
+        Logic.gameEnd = false;
         SceneManager.LoadScene(1);
     }
 }
